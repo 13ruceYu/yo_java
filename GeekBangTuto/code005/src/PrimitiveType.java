@@ -16,12 +16,12 @@ public class PrimitiveType {
         long longVar = 21000000000L;
         System.out.println(longVar);
 
-        // float 4 byte
-        float floatVar = 12222.12345F;
+        // float 4 byte [3.4e-038, 3.4e+038]
+        float floatVar = 1.2345678F;
         System.out.println(floatVar);
 
         // double 8 byte
-        double doubleVar = 12345678.9999D;
+        double doubleVar = 1.234567890123456789D;
         System.out.println(doubleVar);
 
         // boolean 1 bit
