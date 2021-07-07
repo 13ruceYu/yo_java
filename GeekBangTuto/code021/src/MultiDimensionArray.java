@@ -44,5 +44,7 @@ public class MultiDimensionArray {
         int scoreIndex = in.nextInt() - 1;
 
         System.out.println("第" + (year + 1) + "年的" + names[scoreIndex] + "成绩为" + scores[year][scoreIndex]);
+
+        System.out.println(0.3 - 0.1);
     }
 }
