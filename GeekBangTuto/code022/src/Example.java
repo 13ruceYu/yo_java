@@ -36,7 +36,9 @@ public class Example {
             }
         }
 
-        while (true) {
+        boolean toContinue = true;
+
+        while (toContinue) {
             System.out.println("请输入要进行操作的编号");
             System.out.println(
                     "1. 求某年最好成绩\n" + "2. 求某年平均成绩\n" + "3. 求所有年份最好成绩\n" + "4. 求某门课历年最好成绩"
@@ -103,6 +105,7 @@ public class Example {
                     System.out.println(names[nameIndex] + "的最好成绩为 " + bScore + " 在第" + (yearIn + 1) + "年。");
                     break;
                 default:
+                    toContinue = false;
             }
         }
     }
