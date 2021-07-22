@@ -63,10 +63,28 @@ public class RunLittleSuperMarketApp {
                     break;
                 }
 
+                if (index >= all.length) {
+                    System.out.println("本店暂无此商品，输入的编号请在 0 - " + (all.length-1) + "之内。");
+                    continue;
+                }
+
                 Merchandise m = all[index];
 
                 System.out.println("您选购的商品名字" + m.name + "，单价是" + m.soldPrice + "，请输入购买数量：");
                 int numToBuy = scanner.nextInt();
+
+                if (numToBuy <= 0) {
+                    System.out.println("不买看看也好，欢迎继续挑选。");
+                    continue;
+                }
+
+                if (numToBuy > m.count) {
+                    System.out.println("商品库存不足。");
+                }
+
+                if (numToBuy * m.purchasePrice > customer.money) {
+                    System.out.println("您的余额不足。");
+                }
 
                 totalCost += numToBuy * m.soldPrice;
 
